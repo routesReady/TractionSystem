@@ -1,0 +1,657 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Serif+4:wght@600;700&display=swap');
+:root{font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#243447;background:#f4f6f8;font-synthesis:none;text-rendering:optimizeLegibility;overflow-x:hidden}*{box-sizing:border-box;min-width:0}html,body,#root{margin:0;min-height:100%;width:100%;max-width:100%;overflow-x:hidden}body{background:#f4f6f8}button,input,select,textarea{font:inherit;max-width:100%}button{cursor:pointer}button:disabled{cursor:not-allowed}.app-shell{min-height:100vh;width:100%;max-width:100%;display:flex;flex-direction:column;overflow-x:clip}.gov-header{position:sticky;top:0;z-index:30;background:#fff;box-shadow:0 2px 12px rgba(15,31,54,.09);width:100%}.gov-inner{min-height:106px;width:100%;max-width:1540px;display:grid;grid-template-columns:120px minmax(0,1fr) minmax(190px,auto);align-items:center;margin:auto;padding:8px 28px}.brand-logo{display:flex;align-items:center;justify-content:flex-start;min-width:0}.brand-logo img{width:82px;height:82px;object-fit:contain;max-width:100%}.gov-title{text-align:center;min-width:0;overflow:hidden}.gov-kicker{font-size:10px;letter-spacing:2.4px;font-weight:800;color:#68778a;white-space:nowrap}.gov-title h1{font-family:"Source Serif 4",Georgia,serif;font-size:34px;line-height:1.05;margin:4px 0;color:#173b6b;white-space:nowrap}.gov-title p{margin:0;color:#5e6c7d;font-size:14px;font-weight:600;white-space:nowrap}.mobile-menu{display:none;margin-left:auto;width:44px;height:44px;border:1px solid #d8e0e8;background:#fff;border-radius:9px;color:#173b6b;place-items:center}.mobile-menu svg{width:25px}.nav-strip{border-top:1px solid #e6e9ed;border-bottom:1px solid #d7dde4;background:#173b6b;width:100%}.nav-inner{max-width:1540px;margin:auto;min-height:47px;display:flex;align-items:stretch;padding:0 28px;min-width:0}.nav-link{border:0;background:transparent;color:#eaf0f8;padding:0 16px;display:flex;gap:8px;align-items:center;font-size:12px;font-weight:700;position:relative;white-space:nowrap}.nav-link svg{width:16px}.nav-link:hover{background:#244f82}.nav-link.active{background:#fff;color:#173b6b}.nav-link.active:after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:3px;background:#d59b2b}.nav-spacer{flex:1}.official-chip{display:flex;align-items:center;gap:7px;color:#dbe6f2;font-size:10px;font-weight:700;letter-spacing:.4px;white-space:nowrap}.official-chip svg{width:15px}.mobile-nav{display:none}.content{width:min(1540px,100%);max-width:100%;margin:0 auto;padding:24px 28px 38px;flex:1;min-width:0}.page-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:16px;min-width:0}.page-heading>div{min-width:0}.page-heading span,.eyebrow{font-size:9px;letter-spacing:1.7px;font-weight:800;color:#758398}.page-heading h2{font-family:"Source Serif 4",Georgia,serif;font-size:26px;color:#173b6b;margin:4px 0 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.refresh-btn{width:40px;height:40px;flex:none;border:1px solid #cbd6e0;background:#fff;border-radius:8px;color:#315d8c;display:grid;place-items:center;box-shadow:0 3px 10px rgba(24,45,70,.06)}.refresh-btn svg{width:18px}.search-card,.results-card,.panel{background:#fff;border:1px solid #dce2e8;box-shadow:0 7px 24px rgba(24,45,70,.06);max-width:100%;min-width:0}.search-card{padding:13px;border-radius:9px;display:flex;gap:12px;align-items:end}.field{min-width:0;flex:1}.field label{display:flex;gap:6px;align-items:center;font-size:10px;font-weight:800;color:#637186;margin:0 0 6px}.field label svg{width:14px;flex:none}.field input,.field select,.security-form input{height:42px;width:100%;max-width:100%;border:1px solid #cbd5df;border-radius:7px;background:#fbfcfd;padding:0 12px;color:#1e293b;outline:0}.date-input-wrap{position:relative;width:100%;min-width:0}.date-input-wrap input{padding-right:40px;display:block;min-width:0}.field input:focus,.field select:focus,.security-form input:focus,.cell-editor:focus,.locoeditor input:focus,.cell-select:focus,.remarks-wrap textarea:focus,.top-select:focus{border-color:#315d8c;box-shadow:0 0 0 3px rgba(49,93,140,.11)}.primary-btn,.secondary-btn{min-height:42px;height:42px;padding:0 16px;border-radius:7px;display:flex;align-items:center;justify-content:center;gap:8px;font-weight:800;font-size:11px;white-space:nowrap;flex:none}.primary-btn{border:1px solid #173b6b;background:#173b6b;color:#fff}.primary-btn:hover:not(:disabled){background:#244f82}.primary-btn:disabled{opacity:.55}.secondary-btn{border:1px solid #cbd5df;background:#f7f9fb;color:#36506b}.alert{margin-top:11px;border:1px solid #e8c7cc;background:#fff5f6;color:#a52f42;border-radius:7px;padding:11px 13px;display:flex;align-items:center;gap:8px;font-size:11px;max-width:100%;overflow-wrap:anywhere}.alert svg{width:16px;flex:none}.results-card{margin-top:12px;border-radius:9px;overflow:hidden}.result-head{padding:15px 18px;border-bottom:1px solid #e2e7ec;display:flex;align-items:center;justify-content:space-between;gap:12px}.result-head h3{font-family:"Source Serif 4",Georgia,serif;color:#173b6b;font-size:19px;margin:4px 0 0}.result-head h3 i{font-style:normal;color:#a0a9b5}.result-meta{font-size:10px;color:#758398;font-weight:700;white-space:nowrap}.table-shell{overflow:auto;max-width:100%;max-height:68vh;overscroll-behavior:contain;-webkit-overflow-scrolling:touch}.data-table{width:100%;min-width:2800px;border-collapse:separate;border-spacing:0}.data-table th{position:sticky;top:0;z-index:3;background:#eaf0f5;color:#506176;border-bottom:1px solid #d1dbe4;padding:10px 9px;font-size:9px;text-align:left;white-space:nowrap;letter-spacing:.12px}.data-table th.worked-head{min-width:112px;white-space:normal;line-height:1.25}.data-table th.reason-head{min-width:118px;white-space:normal}.data-table td{padding:8px 9px;border-bottom:1px solid #e7edf2;color:#3d4a5c;font-size:10px;white-space:nowrap;vertical-align:middle;background:#fff}.data-table tbody tr:nth-child(even) td{background:#fbfcfd}.data-table tbody tr:hover td{background:#f2f6fa}.action-header{position:sticky!important;right:0;z-index:5}.action-cell{position:sticky;right:0;background:#fff!important;box-shadow:-6px 0 12px rgba(24,45,70,.06);min-width:116px}.data-table tbody tr:nth-child(even) .action-cell{background:#fbfcfd!important}.loco-cell{min-width:150px}.locoeditor{display:flex;align-items:center;gap:4px;position:relative}.locoeditor input{height:31px;width:86px;border:1px solid #cbd5df;border-radius:6px;padding:0 7px;font-size:10px;color:#1e293b;outline:0}.loco-input{max-width:86px}.lookup{width:29px;height:29px;border:1px solid #cbd5df;border-radius:6px;background:#f6f8fa;color:#315d8c;display:grid;place-items:center;flex:none}.lookup svg{width:12px}.lookup:disabled{opacity:.5}.lookup-error{position:absolute;left:0;top:34px;color:#b33c4f;font-size:8px;z-index:8;background:#fff}.cell-select{height:31px;min-width:165px;border:1px solid #cbd5df;background:#fff;border-radius:6px;padding:0 7px;color:#3d4a5c;font-size:10px;outline:0}.worked-select{min-width:105px}.reason-select{min-width:225px;white-space:normal}.cell-editor{height:31px;min-width:115px;border:1px solid #cbd5df;border-radius:6px;background:#fff;padding:0 7px;color:#334155;font-size:10px;outline:0}.new-field-input{min-width:150px}.new-field-cell{min-width:160px}.derived-cell{color:#475569}.wrap-text{white-space:normal;display:inline-block;max-width:230px;line-height:1.35}.remarks-wrap{position:relative;width:205px}.remarks-wrap textarea{width:205px;height:52px;resize:vertical;border:1px solid #cbd5df;border-radius:6px;padding:6px 7px;font-size:10px;line-height:1.35;outline:0;color:#334155}.remarks-wrap small{position:absolute;right:6px;bottom:4px;font-size:8px;color:#8994a3;background:#fff;padding-left:2px}.update{display:flex;align-items:center;justify-content:center;gap:6px;min-width:104px;border:1px solid #b7c9dc;border-radius:6px;background:#edf3f8;color:#214f7d;padding:8px 9px;font-size:9px;font-weight:800}.update svg{width:13px}.update.modify{background:#fff8e8;border-color:#e6c981;color:#805b08}.update:disabled{opacity:.48}.empty-cell{text-align:center!important;padding:30px!important;color:#758398!important}.panel{border-radius:9px;overflow:hidden}.panel-intro{display:flex;gap:15px;padding:19px;border-bottom:1px solid #e0e6eb;min-width:0}.panel-intro.compact{padding:18px}.intro-icon{width:43px;height:43px;flex:none;border-radius:8px;background:#eef3f7;color:#173b6b;display:grid;place-items:center}.intro-icon svg{width:21px}.panel-intro h3{font-family:"Source Serif 4",Georgia,serif;color:#173b6b;font-size:21px;margin:4px 0}.panel-intro p{margin:0;color:#68778a;font-size:11px;line-height:1.55}.filterbar{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(130px,.6fr) auto auto;gap:12px;padding:14px;border-bottom:1px solid #e0e6eb;align-items:end}.top-select{height:42px;width:100%;border:1px solid #cbd5df;border-radius:7px;background:#fbfcfd;padding:0 12px;color:#1e293b;outline:0}.saved-filterbar{grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(130px,.55fr) auto auto}.summary-filterbar{grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(130px,.55fr) auto auto}.savedresult,.summary-meta{padding:12px 17px;color:#657389;font-size:11px;border-bottom:1px solid #e8edf1}.savedresult strong,.summary-meta strong{color:#1f344d}.summary-table-wrap{width:100%;max-width:100%;overflow:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain}.summary-table{border-collapse:separate;border-spacing:0;min-width:1900px;width:100%}.summary-table th{position:sticky;top:0;background:#eaf0f5;color:#506176;padding:11px 9px;border-bottom:1px solid #d1dbe4;font-size:9px;white-space:normal;line-height:1.3;text-align:center;min-width:100px}.summary-table th:nth-child(4){min-width:170px}.summary-table th:nth-child(5),.summary-table th:nth-child(6){min-width:150px}.summary-table th:nth-child(8),.summary-table th:nth-child(9),.summary-table th:nth-child(10){min-width:165px}.summary-table td{padding:10px 9px;border-bottom:1px solid #e7edf2;font-size:10px;text-align:center;white-space:nowrap;background:#fff}.summary-table tbody tr:nth-child(even) td{background:#fbfcfd}.summary-table tbody tr:hover td{background:#f2f6fa}.dir-pill{display:inline-flex;align-items:center;justify-content:center;min-width:34px;padding:4px 8px;border-radius:999px;background:#edf3f8;color:#173b6b;font-weight:800;font-size:9px}.count-link{border:0;background:transparent;color:#1b5f9e;text-decoration:underline;font-weight:800;font-size:11px;padding:5px 8px}.count-link:hover:not(:disabled){color:#173b6b;background:#eef5fb;border-radius:5px}.count-link:disabled{color:#9ba7b4;text-decoration:none}.empty-panel{padding:28px;text-align:center;color:#758398;font-size:11px}.source-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;padding:14px}.source-card{border:1px solid #dce2e8;border-radius:8px;padding:17px;background:#fbfcfd}.source-card-top{display:flex;align-items:center;justify-content:space-between;color:#315d8c}.source-card-top svg{width:21px}.source-card-top span{font-size:9px;font-weight:800;background:#eef3f7;border-radius:20px;padding:5px 8px;color:#637186}.source-card h4{color:#243b56;margin:9px 0 4px;font-size:14px}.source-card p{font-size:10px;color:#778598;margin:0 0 12px;min-height:15px}.picker{min-height:88px;border:1px dashed #b9c7d5;background:#fff;border-radius:7px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;color:#718095;font-size:10px;text-align:center;padding:10px;cursor:pointer;overflow:hidden}.picker span{max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.picker svg{width:20px;flex:none}.picker input{display:none}.download-source{margin-top:9px;width:100%;height:35px;border:1px solid #cbd5df;background:#fff;border-radius:6px;color:#315d8c;font-size:10px;font-weight:800;display:flex;align-items:center;justify-content:center;gap:7px}.download-source:disabled{opacity:.45}.download-source svg{width:15px}.security{border-top:1px solid #e0e6eb;padding:18px;background:#f8fafb}.security-head{display:flex;gap:11px;align-items:center}.security-icon{width:39px;height:39px;border-radius:8px;background:#e9f0f6;color:#173b6b;display:grid;place-items:center}.security-icon svg{width:18px}.security h4{margin:4px 0;color:#29435f;font-size:13px}.security-form{display:flex;gap:10px;max-width:760px;margin-top:13px}.security-form input{max-width:480px}.secure{display:flex;align-items:center;gap:6px;color:#28735f;font-size:9px;margin-top:9px}.secure svg{width:14px}.spin{animation:spin 1s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}.footer{border-top:1px solid #d9e0e6;background:#fff;color:#788697;font-size:9px;min-height:44px;padding:0 28px;display:flex;align-items:center;justify-content:center;position:relative;width:100%}.footer span{position:absolute;right:28px;color:#9aa4b0;font-weight:700}
+@media(max-width:1050px){.gov-inner{grid-template-columns:100px minmax(0,1fr) 60px;padding:8px 20px}.brand-logo img{width:72px;height:72px}.gov-title h1{font-size:30px}.nav-inner{padding:0 20px}.content{padding:20px 20px 32px}.filterbar,.saved-filterbar,.summary-filterbar{grid-template-columns:1fr 1fr}.filterbar .primary-btn,.filterbar .secondary-btn{width:100%}}
+@media(max-width:760px){.gov-inner{min-height:80px;grid-template-columns:56px minmax(0,1fr) 46px;padding:6px 12px}.brand-logo img{width:52px;height:52px}.gov-kicker{font-size:7px;letter-spacing:1.2px}.gov-title h1{font-size:23px}.gov-title p{font-size:10px}.mobile-menu{display:grid}.nav-strip{display:none}.mobile-nav{display:flex;flex-direction:column;background:#173b6b;padding:7px 12px}.mobile-nav button{border:0;background:transparent;color:#fff;text-align:left;padding:11px 8px;font-size:11px;border-bottom:1px solid rgba(255,255,255,.1)}.mobile-nav button.active{font-weight:800;color:#f4d38a}.content{padding:16px 12px 26px;width:100%;max-width:100%}.page-heading h2{font-size:22px}.page-heading span{font-size:8px}.refresh-btn{width:38px;height:38px}.search-card{display:grid;grid-template-columns:minmax(0,1fr);padding:11px}.primary-btn{width:100%;min-width:0}.result-head{align-items:flex-start;gap:10px}.result-head h3{font-size:17px}.result-meta{white-space:nowrap}.table-shell{max-height:60vh}.filterbar,.saved-filterbar,.summary-filterbar{grid-template-columns:minmax(0,1fr)}.filterbar button{width:100%}.source-grid{grid-template-columns:minmax(0,1fr);padding:11px}.panel-intro{padding:16px}.panel-intro h3{font-size:18px}.security-form{flex-direction:column}.security-form input{max-width:none}.summary-table-wrap{border-top:1px solid #e4e9ee}.summary-table{min-width:1650px}.footer{padding:0 12px;justify-content:flex-start}.footer span{right:12px}.savedresult,.summary-meta{line-height:1.6}.panel{width:100%;overflow:hidden}}
+@media(max-width:430px){.gov-inner{grid-template-columns:48px minmax(0,1fr) 42px;padding:6px 9px}.brand-logo img{width:46px;height:46px}.gov-title h1{font-size:20px}.gov-title p{font-size:9px}.gov-kicker{font-size:6px}.content{padding-left:9px;padding-right:9px}.page-heading h2{font-size:20px}.result-head{flex-direction:column}.result-meta{white-space:normal}.panel-intro{gap:9px}.intro-icon{width:37px;height:37px}.intro-icon svg{width:18px}.footer{font-size:8px}.filterbar{padding:11px}.field input,.field select,.top-select{height:44px}.primary-btn,.secondary-btn{min-height:44px;height:44px}.date-input-wrap input{font-size:16px}.summary-table th{font-size:8px}.summary-table td{font-size:9px}}
+.summary-total-row td{background:#eaf0f5!important;color:#173b6b;font-weight:800;border-top:2px solid #c4d0dc;border-bottom:0}
+.summary-total-row:hover td{background:#e3ebf2!important}
+
+/* Desktop data-density: keep the full dashboard and saved-data grids inside the viewport.
+   Mobile intentionally retains an inner horizontal scroller because the full operational
+   record has many columns and cannot be legibly collapsed into a single screen. */
+@media(min-width:1051px){
+  .table-shell{overflow-x:hidden;overflow-y:auto}
+  .data-table{min-width:0;width:100%;table-layout:fixed}
+  .data-table th,.data-table td{padding:7px 5px;font-size:8px;white-space:normal;overflow-wrap:anywhere;word-break:break-word;line-height:1.25}
+  .data-table th{font-size:7.5px;line-height:1.2}
+  .data-table th:nth-child(1),.data-table td:nth-child(1){width:2.5%}
+  .data-table th:nth-child(2),.data-table td:nth-child(2){width:4.5%}
+  .data-table th:nth-child(3),.data-table td:nth-child(3){width:2.5%}
+  .data-table th:nth-child(4),.data-table td:nth-child(4){width:4%}
+  .data-table th:nth-child(5),.data-table td:nth-child(5){width:2.5%}
+  .data-table th:nth-child(6),.data-table td:nth-child(6){width:3%}
+  .data-table th:nth-child(7),.data-table td:nth-child(7){width:3%}
+  .data-table th:nth-child(8),.data-table td:nth-child(8){width:4%}
+  .data-table th:nth-child(9),.data-table td:nth-child(9){width:4.5%}
+  .data-table th:nth-child(10),.data-table td:nth-child(10){width:4%}
+  .data-table th:nth-child(11),.data-table td:nth-child(11){width:4%}
+  .data-table th:nth-child(12),.data-table td:nth-child(12){width:4%}
+  .data-table th:nth-child(13),.data-table td:nth-child(13){width:4%}
+  .data-table th:nth-child(14),.data-table td:nth-child(14){width:3.5%}
+  .data-table th:nth-child(15),.data-table td:nth-child(15){width:4%}
+  .data-table th:nth-child(16),.data-table td:nth-child(16){width:3%}
+  .data-table th:nth-child(17),.data-table td:nth-child(17){width:4.5%}
+  .data-table th:nth-child(18),.data-table td:nth-child(18){width:4%}
+  .data-table th:nth-child(19),.data-table td:nth-child(19){width:5%}
+  .data-table th:nth-child(20),.data-table td:nth-child(20){width:4%}
+  .data-table th:nth-child(21),.data-table td:nth-child(21){width:5.5%}
+  .data-table th:nth-child(22),.data-table td:nth-child(22){width:6%}
+  .data-table th:nth-child(23),.data-table td:nth-child(23){width:5%}
+  .data-table th:nth-child(24),.data-table td:nth-child(24){width:4%}
+  .data-table th:nth-child(25),.data-table td:nth-child(25){width:5%}
+  .loco-cell{min-width:0}
+  .locoeditor{justify-content:center;gap:3px}
+  .locoeditor input{width:58px;max-width:58px;height:27px;font-size:8px;padding:0 4px}
+  .lookup{width:24px;height:24px}
+  .cell-select{min-width:0;width:100%;height:27px;font-size:8px;padding:0 3px}
+  .worked-select{min-width:0}
+  .reason-select{min-width:0}
+  .cell-editor{min-width:0;width:100%;height:27px;font-size:8px;padding:0 4px}
+  .new-field-input{min-width:0}
+  .remarks-wrap,.remarks-wrap textarea{width:100%}
+  .remarks-wrap textarea{height:46px;font-size:8px;padding:5px}
+  .wrap-text{max-width:none;width:100%;font-size:8px}
+  .action-cell{min-width:0}
+  .update{min-width:0;width:100%;font-size:8px;padding:6px 3px}
+
+  .summary-table-wrap{overflow-x:hidden;overflow-y:visible}
+  .summary-table{min-width:0;width:100%;table-layout:fixed}
+  .summary-table th,.summary-table td{min-width:0!important;overflow-wrap:anywhere;word-break:break-word;padding:8px 4px}
+  .summary-table th{font-size:8px;line-height:1.18}
+  .summary-table td{font-size:9px}
+  .summary-table th:nth-child(1){width:5%}.summary-table th:nth-child(2){width:8%}.summary-table th:nth-child(3){width:5%}
+  .summary-table th:nth-child(4){width:8%}.summary-table th:nth-child(5){width:8%}.summary-table th:nth-child(6){width:8%}
+  .summary-table th:nth-child(7){width:7%}.summary-table th:nth-child(8){width:8%}.summary-table th:nth-child(9){width:9%}
+  .summary-table th:nth-child(10){width:9%}.summary-table th:nth-child(11){width:6%}.summary-table th:nth-child(12){width:6%}.summary-table th:nth-child(13){width:5%}
+}
+
+.metric-badge{display:inline-flex;margin-left:10px;padding:4px 8px;border-radius:999px;background:#eef4f9;color:#315d8c;font-size:9px;font-weight:800}
+.count-link-strong{font-size:10px}
+
+/* Dashboard intentionally keeps an internal horizontal scroller on desktop/tablet.
+   The full operational grid remains readable instead of shrinking every input into tiny controls.
+   Saved Data and Summary retain their existing responsive behavior. */
+@media(min-width:761px){
+  .dashboard-table-shell{overflow-x:auto;overflow-y:auto;-webkit-overflow-scrolling:touch}
+  .dashboard-results .data-table{min-width:1900px;width:max-content;table-layout:auto}
+  .dashboard-results .data-table th,.dashboard-results .data-table td{font-size:10px;line-height:1.3;padding:9px 7px;white-space:normal;overflow-wrap:anywhere;word-break:break-word}
+  .dashboard-results .data-table th{font-size:9.5px;line-height:1.2}
+  .dashboard-results .cell-select,.dashboard-results .cell-editor{height:32px;font-size:10px;padding:0 6px}
+  .dashboard-results .locoeditor input{width:68px;max-width:68px;height:32px;font-size:10px;padding:0 6px}
+  .dashboard-results .lookup{width:28px;height:28px}
+  .dashboard-results .remarks-wrap textarea{height:52px;font-size:10px;padding:6px}
+  .dashboard-results .wrap-text{font-size:10px}
+  .dashboard-results .update{font-size:10px;padding:8px 7px;min-width:105px}
+}
+@media(max-width:760px){
+  .dashboard-table-shell{overflow-x:auto;overflow-y:auto;-webkit-overflow-scrolling:touch}
+  .dashboard-results .data-table{min-width:1900px}
+}
+
+/* Authentication, role workflows and mobile-safe header */
+.auth-loading{min-height:100vh;display:grid;place-items:center;gap:10px;align-content:center;background:#f4f6f8;color:#315d8c;font-size:12px;font-weight:700}.auth-loading svg{width:28px;height:28px}
+.header-account{display:flex;align-items:center;justify-content:flex-end;gap:7px;min-width:0}.user-chip,.logout-btn{height:36px;border-radius:7px;display:flex;align-items:center;justify-content:center;gap:6px;padding:0 9px;font-size:10px;font-weight:800;white-space:nowrap}.user-chip{border:1px solid #d4dde6;background:#f5f8fa;color:#294c70}.user-action{cursor:pointer}.user-chip svg{width:14px;flex:none}.user-chip svg:last-child{width:12px}.logout-btn{border:1px solid #c9a5aa;background:#fff7f8;color:#9b3041}.logout-btn:hover{background:#fdf0f2}.mobile-logout{display:flex!important;align-items:center;gap:7px;color:#f7d4d8!important;font-weight:800!important}.mobile-logout svg{width:15px}
+.login-shell{min-height:100vh;display:flex;flex-direction:column;background:#f4f6f8}.login-header{position:relative}.login-main{flex:1;display:grid;place-items:center;padding:34px 16px}.login-card{width:min(430px,100%);background:#fff;border:1px solid #dce2e8;border-radius:12px;box-shadow:0 12px 35px rgba(24,45,70,.09);padding:28px}.login-icon{width:52px;height:52px;border-radius:11px;background:#eef3f7;color:#173b6b;display:grid;place-items:center;margin-bottom:12px}.login-icon svg{width:26px}.login-card h2{font-family:"Source Serif 4",Georgia,serif;color:#173b6b;font-size:27px;margin:4px 0}.login-subtitle{font-size:11px;color:#718095;line-height:1.55;margin:0 0 19px}.login-card .field{margin-top:12px}.login-card .field label{font-size:10px}.login-card .field input{height:44px;font-size:13px}.login-error{display:flex;gap:8px;align-items:flex-start;border:1px solid #e7c2c8;background:#fff4f5;color:#9c3041;border-radius:7px;padding:10px;font-size:10px;line-height:1.45;margin:10px 0}.login-error svg{width:15px;flex:none}.forgot-link{border:0;background:transparent;color:#315d8c;font-size:10px;font-weight:800;padding:9px 0 13px;text-decoration:underline}.login-btn{width:100%;margin-top:2px}.login-footer{margin-top:auto}
+.modal-backdrop{position:fixed;inset:0;background:rgba(14,28,45,.45);z-index:100;display:grid;place-items:center;padding:16px}.modal-card{position:relative;width:min(460px,100%);max-height:90vh;overflow:auto;background:#fff;border-radius:12px;border:1px solid #d9e1e8;box-shadow:0 20px 60px rgba(8,23,39,.25);padding:25px}.modal-close{position:absolute;right:12px;top:12px;width:34px;height:34px;border:1px solid #d6dfe7;background:#fff;border-radius:7px;color:#627186;display:grid;place-items:center}.modal-close svg{width:17px}.modal-icon{width:25px;color:#315d8c}.modal-card h3{font-family:"Source Serif 4",Georgia,serif;color:#173b6b;font-size:21px;margin:9px 0 4px}.modal-card p{font-size:10px;color:#718095;line-height:1.5;margin:0 0 14px}.modal-card .field{margin:11px 0}.modal-card .primary-btn{width:100%;margin-top:7px}.modal-message{border:1px solid #d5e4dc;background:#f3faf6;color:#286a55;border-radius:7px;padding:9px;font-size:10px;line-height:1.45;margin-top:10px}
+.role-panel{min-width:0}.loading-panel{min-height:180px;display:grid;place-items:center;align-content:center;gap:8px;color:#68778a;font-size:11px}.loading-panel svg{width:26px;color:#315d8c}.role-table-shell{width:100%;max-width:100%;overflow:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain}.role-table{min-width:1250px}.role-table th,.role-table td{font-size:10px}.role-table th{white-space:nowrap}.role-table td{vertical-align:middle}.role-remark-input{width:230px;min-width:180px;height:64px;resize:vertical;border:1px solid #cbd5df;border-radius:6px;padding:7px;font-size:10px;outline:0}.role-remark-input:focus{border-color:#315d8c;box-shadow:0 0 0 3px rgba(49,93,140,.11)}.request-actions{display:flex;gap:6px}.approve{background:#eef8f2;border-color:#b9d9c5;color:#256848}.reject{background:#fff3f4;border-color:#e1bec3;color:#9b3041}
+@media(max-width:1050px){
+ .gov-inner{grid-template-columns:90px minmax(0,1fr) minmax(180px,auto)}.gov-title h1{font-size:27px}.header-account{gap:5px}.user-chip,.logout-btn{font-size:9px;padding:0 7px}
+}
+@media(max-width:760px){
+ .gov-inner{grid-template-columns:52px minmax(0,1fr) auto}.header-account{gap:5px}.header-account .user-chip,.header-account .logout-btn{display:none}.header-account .mobile-menu{display:grid;margin:0}
+ .gov-title h1{font-size:21px}.gov-title p{font-size:9px}.gov-title{padding:0 3px}.login-header .gov-inner{grid-template-columns:52px minmax(0,1fr)}.login-header .gov-title h1{font-size:21px}
+ .login-main{padding:20px 10px}.login-card{padding:22px 18px}.role-table{min-width:1250px}.role-table-shell{margin:0}
+}
+@media(max-width:430px){
+ .gov-inner{grid-template-columns:46px minmax(0,1fr) auto;padding-left:8px;padding-right:8px}.brand-logo img{width:44px;height:44px}.gov-title h1{font-size:18px;white-space:normal;line-height:1.08}.gov-title p{font-size:8px}.gov-kicker{font-size:5.5px}.login-header .gov-title h1{font-size:18px}.login-card{padding:20px 15px}.modal-card{padding:21px 15px}.user-chip,.logout-btn{height:34px}
+}
+
+
+/* Responsive header hardening -------------------------------------------------
+   The application heading must never force horizontal scrolling on phones.
+   The desktop/tablet header can stay single-line where space allows, while the
+   compact login header intentionally wraps the title into two readable lines. */
+.login-header .gov-inner{grid-template-columns:90px minmax(0,1fr);}
+.login-header .gov-title h1{white-space:normal;overflow:visible;text-overflow:clip;overflow-wrap:normal;word-break:normal;}
+
+@media(max-width:760px){
+  .login-header .gov-inner{min-height:88px;grid-template-columns:50px minmax(0,1fr);padding:7px 10px;}
+  .login-header .brand-logo img{width:46px;height:46px;}
+  .login-header .gov-title{text-align:center;padding:0 2px;}
+  .login-header .gov-kicker{font-size:6.5px;letter-spacing:1.25px;}
+  .login-header .gov-title h1{font-size:19px;line-height:1.08;margin:3px auto 2px;white-space:normal;max-width:100%;}
+  .login-header .gov-title p{font-size:8.5px;line-height:1.15;white-space:normal;}
+}
+
+@media(max-width:430px){
+  .login-header .gov-inner{min-height:86px;grid-template-columns:46px minmax(0,1fr);padding:6px 8px;}
+  .login-header .brand-logo img{width:43px;height:43px;}
+  .login-header .gov-kicker{font-size:6px;letter-spacing:1.05px;}
+  .login-header .gov-title h1{font-size:18px;line-height:1.06;max-width:255px;}
+  .login-header .gov-title p{font-size:8px;}
+}
+
+/* Keep authenticated headers from ever widening the viewport when a username
+   or long title is present. */
+.gov-title{min-width:0;max-width:100%;}
+.header-account{min-width:0;max-width:100%;}
+@media(max-width:760px){
+  .gov-title h1{white-space:normal;overflow-wrap:anywhere;}
+}
+
+
+/* Complete Shed/OEM role tables ------------------------------------------------
+   Keep the same wide, horizontally scrollable data surface as Dashboard while
+   preventing the page itself from scrolling sideways. */
+.role-full-table{min-width:2800px}
+.role-full-table .role-remark-input{width:205px;min-width:205px;height:52px}
+.role-full-table .new-field-cell{min-width:160px}
+.back-summary-row{padding:12px 14px;border-bottom:1px solid #e0e6eb;background:#f8fafb}
+.back-summary-row .secondary-btn{width:max-content}
+@media(max-width:760px){
+  .back-summary-row .secondary-btn{width:100%}
+  .role-full-table{min-width:2800px}
+}
+
+/* Remark-page table UX -------------------------------------------------------
+   Keep the horizontal scrollbar available at the top of the data surface so
+   users never have to travel to the bottom of a long dataset just to move
+   sideways. Both scrollbars stay synchronized. Reserve enough width before
+   the sticky ACTION column so the editable remark box can never sit beneath it. */
+.role-horizontal-scroll{
+  width:100%;
+  max-width:100%;
+  height:16px;
+  overflow-x:auto;
+  overflow-y:hidden;
+  border-bottom:1px solid #dfe6ec;
+  background:#f8fafc;
+  -webkit-overflow-scrolling:touch;
+  overscroll-behavior-x:contain;
+  scrollbar-width:auto;
+}
+.role-horizontal-scroll>div{height:1px;width:2800px}
+.role-table-shell{width:100%;max-width:100%;overflow-x:auto;overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain}
+.role-full-table{min-width:3000px}
+.role-full-table .new-field-cell{min-width:370px;padding-right:145px}
+.role-full-table .role-remark-input{width:240px;min-width:240px;max-width:240px;height:58px;display:block;position:relative;z-index:1}
+.role-full-table .action-header,.role-full-table .action-cell{min-width:132px;width:132px}
+.role-full-table .action-cell{z-index:7}
+@media(max-width:760px){
+  .role-horizontal-scroll{height:18px}
+  .role-full-table{min-width:3000px}
+  .role-full-table .new-field-cell{min-width:370px;padding-right:145px}
+  .role-full-table .role-remark-input{width:240px;min-width:240px;max-width:240px;height:58px}
+  .role-full-table .action-header,.role-full-table .action-cell{min-width:132px;width:132px}
+}
+
+/* Match Dashboard table scrolling on Shed/OEM Remark pages. */
+.role-table-shell{width:100%;max-width:100%;max-height:68vh;overflow:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch}
+.role-full-table{min-width:3000px;width:max-content;table-layout:auto}
+@media(max-width:760px){.role-table-shell{max-height:60vh;overflow:auto;-webkit-overflow-scrolling:touch}.role-full-table{min-width:3000px;width:max-content}}
+
+/* V6: Lean Shed/OEM remark tables ------------------------------------------------
+   The remark pages intentionally omit non-essential wide columns so the tables
+   remain responsive. Keep the same internal table scrolling model as Dashboard,
+   but do not force an oversized 3000px table. */
+.role-table-shell{
+  width:100%;
+  max-width:100%;
+  max-height:68vh;
+  overflow:auto;
+  -webkit-overflow-scrolling:touch;
+  overscroll-behavior:contain;
+}
+.role-full-table{
+  min-width:100%;
+  width:max-content;
+  table-layout:auto;
+}
+.role-full-table th,
+.role-full-table td{
+  white-space:normal;
+  overflow-wrap:anywhere;
+  word-break:break-word;
+  vertical-align:middle;
+}
+.role-full-table th{font-size:9px;line-height:1.2}
+.role-full-table td{font-size:10px;line-height:1.3}
+.role-full-table .new-field-cell{
+  min-width:190px;
+  padding-right:9px;
+}
+.role-full-table .role-remark-input{
+  width:180px;
+  min-width:160px;
+  max-width:180px;
+  height:52px;
+  resize:vertical;
+  box-sizing:border-box;
+}
+.role-full-table .action-header,
+.role-full-table .action-cell{
+  min-width:92px;
+  width:92px;
+  max-width:92px;
+}
+.role-full-table .action-cell{z-index:7}
+
+/* Compact action controls everywhere they are used (Dashboard, Saved/Admin
+   actions, Shed/OEM remark actions, and any Close control using .close-btn). */
+.update,
+.close-btn{
+  min-width:78px;
+  width:auto;
+  min-height:30px;
+  height:30px;
+  padding:4px 7px;
+  gap:4px;
+  border-radius:5px;
+  font-size:8px;
+  line-height:1;
+}
+.update svg,
+.close-btn svg{width:12px;height:12px}
+.update.modify{padding-left:7px;padding-right:7px}
+.request-actions .update{min-width:68px;width:auto}
+
+/* Dashboard remains a full operational grid, but its actions use the same
+   compact control dimensions for a consistent UI. */
+.dashboard-results .update{min-width:88px;padding:5px 7px;font-size:8.5px}
+
+@media(max-width:760px){
+  .role-table-shell{max-height:60vh;overflow:auto}
+  .role-full-table{min-width:1000px;width:max-content}
+  .role-full-table .new-field-cell{min-width:170px}
+  .role-full-table .role-remark-input{width:155px;min-width:140px;max-width:155px;height:48px}
+  .role-full-table .action-header,
+  .role-full-table .action-cell{min-width:82px;width:82px;max-width:82px}
+  .update,
+  .close-btn{min-width:68px;height:28px;min-height:28px;padding:4px 5px;font-size:7.5px}
+  .dashboard-results .update{min-width:78px;font-size:8px;padding:5px 5px}
+}
+
+
+/* V7 public homepage / unauthenticated Summary + Saved Data navigation. */
+.public-account{display:flex;justify-content:flex-end;align-items:center}
+.login-header-btn{height:36px;border:1px solid #c8d4df;background:#fff;border-radius:7px;color:#173b6b;padding:0 12px;display:flex;align-items:center;gap:6px;font-size:10px;font-weight:800;cursor:pointer}
+.login-header-btn:hover{background:#f3f7fa}
+.login-header-btn svg{width:15px}
+.app-message{margin:0 0 12px;padding:9px 12px;border:1px solid #d7e2eb;background:#f7fafc;border-radius:7px;color:#31506f;font-size:10px}
+@media(max-width:760px){.public-account{min-width:0}.login-header-btn{height:34px;padding:0 9px;font-size:9px}.login-header-btn svg{width:14px}}
+
+/* V8: Shed/OEM remark close action. Keep Update/Modify and Close compact and
+   side-by-side without allowing either control to overlap the remark input. */
+.remark-actions{display:flex;align-items:center;justify-content:center;gap:4px;white-space:nowrap}
+.role-full-table .remark-actions .update{min-width:58px;width:auto;height:28px;min-height:28px;padding:4px 6px;font-size:7.5px}
+.role-full-table .remark-actions .close-btn{min-width:28px;width:28px;height:28px;min-height:28px;padding:4px;border-radius:5px;display:inline-flex;align-items:center;justify-content:center}
+.role-full-table .remark-actions .close-btn svg{width:12px;height:12px}
+.role-full-table .action-header,.role-full-table .action-cell{min-width:108px;width:108px;max-width:108px}
+@media(max-width:760px){
+  .role-full-table .action-header,.role-full-table .action-cell{min-width:94px;width:94px;max-width:94px}
+  .role-full-table .remark-actions .update{min-width:52px;height:26px;min-height:26px;padding:3px 5px;font-size:7px}
+  .role-full-table .remark-actions .close-btn{width:26px;min-width:26px;height:26px;min-height:26px}
+}
+
+
+/* V9: Login page home navigation. A hard navigation to / intentionally
+   resets the SPA to the public homepage/index state. */
+.back-home-btn{width:100%;justify-content:center;margin-top:8px;min-height:36px;font-size:10px;}
+.back-home-btn span{font-size:15px;line-height:1;}
+@media(max-width:430px){.back-home-btn{min-height:34px;font-size:9px;margin-top:7px;}}
+
+/* V11: Public mobile navigation. On phones the Summary, Saved Data / Export,
+   and Login actions are grouped behind one compact three-line menu button. */
+.public-mobile-menu{display:none}
+.public-mobile-nav button{display:flex;align-items:center;gap:9px}
+.public-mobile-nav button svg{width:16px;height:16px;flex:none}
+@media(max-width:760px){
+  .desktop-login{display:none!important}
+  .public-mobile-menu{display:grid!important;margin-left:auto;width:42px;height:42px}
+  .public-mobile-nav{display:flex!important}
+}
+@media(max-width:430px){
+  .public-mobile-menu{width:40px;height:40px}
+}
+
+/* V11: Date inputs must remain usable on narrow phone screens. The native
+   date-picker remains the only calendar control; the field itself flexes to
+   the available width without overflowing the filter card. */
+.date-input-wrap{min-width:0;max-width:100%;overflow:hidden}
+.date-input-wrap input[type="date"]{width:100%;min-width:0;max-width:100%;height:42px;padding-left:11px;padding-right:34px;font-size:13px;appearance:auto;-webkit-appearance:auto}
+@media(max-width:760px){
+  .filterbar,.saved-filterbar,.summary-filterbar{grid-template-columns:minmax(0,1fr);width:100%;gap:10px}
+  .filterbar .field,.saved-filterbar .field,.summary-filterbar .field{width:100%;min-width:0}
+  .date-input-wrap input[type="date"]{height:44px;width:100%;font-size:16px;padding-left:11px;padding-right:34px}
+}
+@media(max-width:430px){
+  .date-input-wrap input[type="date"]{height:44px;font-size:16px;padding-left:10px;padding-right:32px}
+}
+
+/* V12: Summary & Detail report ------------------------------------------------ */
+.detail-panel{overflow:hidden}
+.detail-filterbar{grid-template-columns:minmax(180px,1fr) minmax(180px,1fr) auto;align-items:end}
+.detail-meta{margin:10px 0;padding:9px 12px;border:1px solid #dbe5ec;background:#f7fafc;border-radius:7px;color:#36536d;font-size:10px}
+.detail-metric-table,.detail-section{margin-top:12px;border:1px solid #d8e2e9;border-radius:8px;background:#fff;overflow:hidden}
+.detail-metric-table table,.detail-section table{width:100%;border-collapse:collapse}
+.detail-metric-table th,.detail-metric-table td,.detail-section th,.detail-section td{border-bottom:1px solid #e1e7ec;padding:7px 9px;font-size:9px;text-align:left;vertical-align:middle}
+.detail-metric-table th,.detail-section th{background:#edf3f7;color:#214461;font-weight:800;text-transform:uppercase;letter-spacing:.25px}
+.detail-metric-table td:not(:first-child),.detail-metric-table th:not(:first-child),.detail-section td:not(:nth-child(2)),.detail-section th:not(:nth-child(2)){text-align:center}
+.detail-section h4{margin:0;padding:9px 11px;background:#f5f8fa;color:#173b6b;font-size:10px;border-bottom:1px solid #d8e2e9}
+.detail-scroll{max-width:100%;max-height:42vh;overflow:auto;-webkit-overflow-scrolling:touch}
+.detail-record-table{min-width:900px}
+.detail-empty{text-align:center!important;color:#7b8b98;padding:14px!important}
+.detail-placeholder{margin-top:12px;padding:25px;text-align:center;border:1px dashed #cbd8e1;border-radius:8px;color:#708292;font-size:10px;background:#fbfcfd}
+@media(max-width:760px){
+ .detail-filterbar{grid-template-columns:1fr}
+ .detail-metric-table th,.detail-metric-table td,.detail-section th,.detail-section td{font-size:8px;padding:6px 7px}
+ .detail-record-table{min-width:820px}
+ .detail-scroll{max-height:48vh}
+}
+
+/* V13: Summary & Detail — faithful A4/Excel-style report layout. */
+.summary-detail-a4{background:#fff;color:#000;width:100%;max-width:190mm;margin:14px auto 20px;border:1px solid #9aa5ad;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
+.a4-report-title{width:69.36%;height:15.75px;line-height:15.75px;border:1px solid #000;border-bottom:0;text-align:center;font-size:11px;font-weight:700;box-sizing:border-box}
+.excel-detail-table{width:100%;border-collapse:collapse;table-layout:fixed;font-family:Arial,Helvetica,sans-serif;font-size:11px}
+.excel-detail-table th,.excel-detail-table td{border:1px solid #000;height:21px;padding:2px 4px;box-sizing:border-box;vertical-align:middle;color:#000;background:#fff}
+.metric-report-table,.division-report-table{width:69.36%}.metric-report-table th,.metric-report-table td{text-align:center}
+.metric-report-table th:nth-child(2),.metric-report-table td:nth-child(2){text-align:left}
+.metric-report-table th:nth-child(1),.metric-report-table td:nth-child(1){width:10mm}
+.metric-report-table th:nth-child(2),.metric-report-table td:nth-child(2){width:75mm}
+.metric-report-table th:nth-child(3),.metric-report-table td:nth-child(3){width:20mm}
+.metric-report-table th:nth-child(4),.metric-report-table td:nth-child(4){width:26mm}
+.metric-report-table th:nth-child(5),.metric-report-table td:nth-child(5){width:28mm}
+.metric-report-table th{font-weight:700;text-align:center}
+.metric-report-table tr:nth-child(2) td:nth-child(2),.metric-report-table tr:nth-child(3) td:nth-child(2){height:30px}
+.wrap-label{white-space:normal;line-height:14px}
+.excel-detail-section{margin:0;padding:0}
+.excel-detail-section h4{width:69.36%;height:21px;line-height:21px;margin:0;border:1px solid #000;border-top:0;text-align:center;font-size:11px;font-weight:700;box-sizing:border-box;background:#fff;color:#000}
+.division-report-table td{text-align:center;height:21px}
+.division-report-table td:nth-child(2){text-align:left}
+.division-report-table .sn-col{width:10mm}
+.division-report-table td:nth-child(2){width:75mm}
+.division-report-table td:nth-child(3){width:20mm}
+.division-report-table td:nth-child(4){width:26mm}
+.division-report-table td:nth-child(5){width:28mm}
+.record-report-table th,.record-report-table td{text-align:center;height:21px}
+.record-report-table th:nth-child(2),.record-report-table td:nth-child(2),.record-report-table th:nth-child(6),.record-report-table td:nth-child(6),.record-report-table th:nth-child(7),.record-report-table td:nth-child(7),.record-report-table th:nth-child(8),.record-report-table td:nth-child(8){text-align:left}
+.record-report-table th:nth-child(1),.record-report-table td:nth-child(1){width:10mm}.record-report-table th:nth-child(2),.record-report-table td:nth-child(2){width:25mm}.record-report-table th:nth-child(3),.record-report-table td:nth-child(3){width:23mm}.record-report-table th:nth-child(4),.record-report-table td:nth-child(4){width:20mm}.record-report-table th:nth-child(5),.record-report-table td:nth-child(5){width:28mm}.record-report-table th:nth-child(6),.record-report-table td:nth-child(6){width:29mm}.record-report-table th:nth-child(7),.record-report-table td:nth-child(7){width:27mm}.record-report-table th:nth-child(8),.record-report-table td:nth-child(8){width:28mm}
+@media(max-width:760px){.summary-detail-a4{max-width:100%;overflow-x:auto}.summary-detail-a4 .excel-detail-table{min-width:160mm}.detail-filterbar{grid-template-columns:1fr}.a4-report-title{font-size:10px}}
+@media print{
+ @page{size:A4 portrait;margin:10mm}
+ html,body{background:#fff!important;margin:0!important;padding:0!important}
+ body *{visibility:hidden!important}
+ .summary-detail-a4,.summary-detail-a4 *{visibility:visible!important}
+ .summary-detail-a4{position:relative;left:0;top:0;width:190mm;max-width:190mm;margin:0;padding:0;border:0;overflow:visible!important;box-shadow:none!important}
+ .no-print{display:none!important}
+ .excel-detail-table{font-size:11px}
+ .excel-detail-table th,.excel-detail-table td{break-inside:avoid}
+ .excel-detail-section{break-inside:auto}
+ .records-report-section{break-inside:auto}.records-report-section h4{width:100%}
+}
+
+/* V14: Summary & Detail report refinements ----------------------------------
+   Keep the Excel-style 5-column summary sections compact, while making the
+   detailed report a true full-width A4 grid. The defective detail table now
+   has a Date column, so all 9 columns are sized to exactly the printable
+   190mm width and no vertical borders are cut off. */
+.record-report-table{width:190mm;max-width:190mm;table-layout:fixed}
+.record-report-table th:nth-child(1),.record-report-table td:nth-child(1){width:9mm}
+.record-report-table th:nth-child(2),.record-report-table td:nth-child(2){width:20mm}
+.record-report-table th:nth-child(3),.record-report-table td:nth-child(3){width:21mm}
+.record-report-table th:nth-child(4),.record-report-table td:nth-child(4){width:20mm}
+.record-report-table th:nth-child(5),.record-report-table td:nth-child(5){width:18mm}
+.record-report-table th:nth-child(6),.record-report-table td:nth-child(6){width:22mm}
+.record-report-table th:nth-child(7),.record-report-table td:nth-child(7){width:27mm}
+.record-report-table th:nth-child(8),.record-report-table td:nth-child(8){width:26mm}
+.record-report-table th:nth-child(9),.record-report-table td:nth-child(9){width:27mm}
+.record-report-table th,.record-report-table td{overflow-wrap:anywhere;word-break:normal}
+.record-report-table th:nth-child(2),.record-report-table td:nth-child(2),
+.record-report-table th:nth-child(7),.record-report-table td:nth-child(7),
+.record-report-table th:nth-child(8),.record-report-table td:nth-child(8),
+.record-report-table th:nth-child(9),.record-report-table td:nth-child(9){text-align:left}
+.records-with-date .record-report-table th:nth-child(1),.records-with-date .record-report-table td:nth-child(1){width:9mm}
+.records-with-date .record-report-table th:nth-child(2),.records-with-date .record-report-table td:nth-child(2){width:20mm;text-align:center}
+.records-with-date .record-report-table th:nth-child(3),.records-with-date .record-report-table td:nth-child(3){width:21mm;text-align:center}
+.records-with-date .record-report-table th:nth-child(4),.records-with-date .record-report-table td:nth-child(4){width:20mm;text-align:center}
+.records-with-date .record-report-table th:nth-child(5),.records-with-date .record-report-table td:nth-child(5){width:18mm;text-align:center}
+.records-with-date .record-report-table th:nth-child(6),.records-with-date .record-report-table td:nth-child(6){width:22mm;text-align:center}
+.records-with-date .record-report-table th:nth-child(7),.records-with-date .record-report-table td:nth-child(7){width:27mm;text-align:left}
+.records-with-date .record-report-table th:nth-child(8),.records-with-date .record-report-table td:nth-child(8){width:26mm;text-align:left}
+.records-with-date .record-report-table th:nth-child(9),.records-with-date .record-report-table td:nth-child(9){width:27mm;text-align:left}
+.records-report-section h4{width:190mm;max-width:190mm}
+
+@media(max-width:760px){
+  .summary-detail-a4{overflow-x:auto}
+  .summary-detail-a4 .record-report-table{min-width:190mm}
+}
+
+@media print{
+  .detail-panel{margin:0!important;padding:0!important;border:0!important;background:#fff!important;box-shadow:none!important}
+  .summary-detail-a4{position:absolute!important;left:10mm!important;top:10mm!important;width:190mm!important;max-width:190mm!important;margin:0!important;padding:0!important;border:0!important;overflow:visible!important}
+  .a4-report-title{margin:0!important;padding:0!important}
+  .summary-detail-a4 .excel-detail-table{margin:0!important}
+  .records-report-section h4{margin:0!important}
+  .record-report-table{width:190mm!important;max-width:190mm!important}
+}
+
+/* V22: Summary & Detail interaction, A4 sizing and responsive record modal. */
+.records-modal-backdrop{z-index:220;padding:18px}
+.records-modal-card{position:relative;width:min(96vw,1500px);max-height:92vh;overflow:hidden;background:#fff;border-radius:12px;border:1px solid #cfd9e2;box-shadow:0 24px 80px rgba(8,23,39,.32);padding:20px}
+.records-modal-head{padding-right:42px;border-bottom:1px solid #e3e9ee;padding-bottom:10px;margin-bottom:10px}
+.records-modal-head h3{font-family:"Source Serif 4",Georgia,serif;color:#173b6b;font-size:20px;margin:4px 0}
+.records-modal-head p{margin:0;color:#68788b;font-size:10px}
+.records-modal-table-shell{width:100%;max-height:70vh;overflow:auto;-webkit-overflow-scrolling:touch;border:1px solid #d9e2e9;border-radius:7px}
+.records-modal-table{min-width:1900px}
+.records-modal-table th{position:sticky;top:0;z-index:2;background:#eaf0f5}
+.records-modal-table td,.records-modal-table th{font-size:9px;vertical-align:top}
+.detail-count-link{font-size:10px;padding:2px 5px}
+.detail-count-link:disabled{cursor:default}
+.summary-detail-a4{max-width:190mm;width:190mm;overflow:hidden}
+.a4-report-title{width:100%}
+.metric-report-table,.division-report-table{width:100%}
+.excel-detail-section h4{width:100%}
+.detail-record-scroll{width:100%;max-height:55vh;overflow:auto;-webkit-overflow-scrolling:touch}
+.detail-record-scroll .record-report-table{min-width:190mm}
+
+@media(max-width:760px){
+ .records-modal-card{width:100%;max-height:94vh;padding:14px}
+ .records-modal-table-shell{max-height:72vh}
+ .summary-detail-a4{width:190mm;max-width:none}
+}
+@media print{
+ .records-modal-backdrop{display:none!important}
+ .summary-detail-a4{width:190mm!important;max-width:190mm!important}
+ .metric-report-table,.division-report-table,.excel-detail-section h4{width:190mm!important;max-width:190mm!important}
+ .detail-record-scroll{max-height:none!important;overflow:visible!important}
+}
+@media screen{
+ .summary-detail-a4{max-height:72vh;overflow:auto;-webkit-overflow-scrolling:touch}
+}
+@media print{
+ .summary-detail-a4{max-height:none!important;overflow:visible!important}
+}
+
+/* V23: professional Summary & Detail report styling / print polish */
+.summary-detail-a4{
+  background:#fff;
+  border:1px solid #b8c4ce;
+  box-shadow:0 8px 24px rgba(19,46,71,.08);
+  overflow:auto;
+  -webkit-overflow-scrolling:touch;
+}
+.summary-detail-a4 .a4-report-title{
+  background:#eef3f7;
+  color:#173b6b;
+  font-weight:800;
+  letter-spacing:.15px;
+  border-color:#173b6b;
+}
+.summary-detail-a4 .excel-detail-table{
+  border-collapse:collapse;
+}
+.summary-detail-a4 .excel-detail-table th{
+  background:#e8eef3;
+  color:#173b6b;
+  font-weight:800;
+  vertical-align:middle;
+  line-height:1.2;
+}
+.summary-detail-a4 .excel-detail-table tbody tr:nth-child(even) td{
+  background:#f7fafc;
+}
+.summary-detail-a4 .excel-detail-table tbody tr:nth-child(odd) td{
+  background:#fff;
+}
+.summary-detail-a4 .excel-detail-table td,
+.summary-detail-a4 .excel-detail-table th{
+  border-color:#9eabb6;
+}
+.summary-detail-a4 .excel-detail-section{
+  margin:10px 0 0;
+  padding:0;
+}
+.summary-detail-a4 .excel-detail-section h4{
+  min-height:24px;
+  height:auto;
+  line-height:15px;
+  padding:4px 8px;
+  background:#eaf0f5;
+  color:#173b6b;
+  border:1px solid #7f8e9a;
+  border-bottom:0;
+  white-space:normal;
+}
+.summary-detail-a4 .excel-detail-section .excel-detail-table{
+  margin:0;
+}
+.summary-detail-a4 .metric-report-table tbody tr td:first-child,
+.summary-detail-a4 .division-report-table tbody tr td:first-child{
+  font-weight:700;
+}
+.summary-detail-a4 .record-report-table td{
+  vertical-align:top;
+  line-height:1.2;
+  white-space:normal;
+  overflow-wrap:anywhere;
+}
+.summary-detail-a4 .detail-record-scroll{
+  max-height:55vh;
+  overflow:auto;
+  border:1px solid #9eabb6;
+}
+
+@media screen and (min-width:761px){
+  .summary-detail-a4{max-height:72vh}
+}
+
+@media print{
+  .summary-detail-a4{
+    box-shadow:none!important;
+    border:0!important;
+    overflow:visible!important;
+    max-height:none!important;
+  }
+  .summary-detail-a4 .excel-detail-section{
+    margin-top:7mm!important;
+    break-inside:auto;
+  }
+  .summary-detail-a4 .excel-detail-section h4{
+    break-after:avoid-page;
+  }
+  .summary-detail-a4 .excel-detail-table thead{
+    display:table-header-group;
+  }
+  .summary-detail-a4 .excel-detail-table tr{
+    break-inside:avoid;
+  }
+  .summary-detail-a4 .excel-detail-table th{
+    background:#e8eef3!important;
+    -webkit-print-color-adjust:exact;
+    print-color-adjust:exact;
+  }
+  .summary-detail-a4 .excel-detail-table tbody tr:nth-child(even) td{
+    background:#f7fafc!important;
+    -webkit-print-color-adjust:exact;
+    print-color-adjust:exact;
+  }
+}
+
+/* V25: Excel export is intentionally available only in Summary metric popups. */
+.records-modal-head{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.records-modal-download{flex:0 0 auto;min-height:38px;white-space:nowrap}
+@media (max-width:760px){
+  .records-modal-head{align-items:flex-start;flex-direction:column}
+  .records-modal-download{width:100%;justify-content:center}
+}
+
+/* V27: portrait Summary & Detail + record-level NON KAVACH attachment table */
+.non-kavach-attach-table{min-width:0!important;width:100%;table-layout:fixed}
+.non-kavach-attach-table th:nth-child(1),.non-kavach-attach-table td:nth-child(1){width:8%}
+.non-kavach-attach-table th:nth-child(2),.non-kavach-attach-table td:nth-child(2){width:14%;text-align:center}
+.non-kavach-attach-table th:nth-child(3),.non-kavach-attach-table td:nth-child(3){width:13%;text-align:center}
+.non-kavach-attach-table th:nth-child(4),.non-kavach-attach-table td:nth-child(4){width:12%;text-align:center}
+.non-kavach-attach-table th:nth-child(5),.non-kavach-attach-table td:nth-child(5){width:11%;text-align:center}
+.non-kavach-attach-table th:nth-child(6),.non-kavach-attach-table td:nth-child(6){width:17%;text-align:left}
+.non-kavach-attach-table th:nth-child(7),.non-kavach-attach-table td:nth-child(7){width:25%;text-align:left;white-space:normal;overflow-wrap:anywhere;word-break:normal}
+.non-kavach-detail-section .detail-record-scroll{max-height:55vh;overflow:auto}
+@media print{
+ @page{size:A4 portrait;margin:10mm}
+ .summary-detail-a4{width:190mm!important;max-width:190mm!important;overflow:visible!important}
+ .non-kavach-attach-table{width:190mm!important;max-width:190mm!important;min-width:0!important}
+ .non-kavach-detail-section .detail-record-scroll{max-height:none!important;overflow:visible!important}
+}
+
+/* V30: Public About Us page ------------------------------------------------- */
+.about-page{max-width:1180px;margin:0 auto;padding:8px 0 26px}
+.about-hero{position:relative;display:flex;align-items:center;gap:20px;padding:30px 32px;margin-bottom:18px;border:1px solid #d7e2eb;border-radius:16px;background:linear-gradient(135deg,#f8fbfd 0%,#ffffff 55%,#eef5fa 100%);box-shadow:0 12px 30px rgba(24,58,91,.07);overflow:hidden}
+.about-hero:after{content:"";position:absolute;width:230px;height:230px;right:-90px;top:-110px;border-radius:50%;background:rgba(31,72,117,.06)}
+.about-hero-icon{position:relative;z-index:1;display:grid;place-items:center;width:62px;height:62px;flex:none;border-radius:15px;background:#183f70;color:#fff;box-shadow:0 8px 18px rgba(24,63,112,.2)}
+.about-hero-icon svg{width:30px;height:30px}
+.about-hero h2{position:relative;z-index:1;margin:4px 0 8px;color:#173d68;font-family:Georgia,serif;font-size:27px;line-height:1.2}
+.about-hero p{position:relative;z-index:1;margin:0;max-width:820px;color:#5d7183;font-size:12px;line-height:1.7}
+.about-grid{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(300px,.8fr);gap:18px;margin-bottom:18px}
+.about-card{border:1px solid #d7e2eb;border-radius:14px;background:#fff;box-shadow:0 8px 24px rgba(24,58,91,.055);padding:22px}
+.about-card-head{display:flex;align-items:flex-start;gap:12px;margin-bottom:12px;color:#1d4b7b}
+.about-card-head>svg{width:23px;height:23px;flex:none;margin-top:2px}
+.about-card h3{margin:3px 0 0;color:#173d68;font-family:Georgia,serif;font-size:19px;line-height:1.25}
+.about-card p{margin:0;color:#596f82;font-size:11px;line-height:1.75}
+.about-points{display:grid;gap:9px;margin-top:16px}
+.about-points>div{display:flex;align-items:flex-start;gap:8px;padding:9px 11px;border:1px solid #e1eaf0;border-radius:9px;background:#f8fbfd;color:#36546e;font-size:10px;line-height:1.5}
+.about-points svg{width:15px;height:15px;flex:none;color:#2a6b4c;margin-top:1px}
+.workflow-card{margin-bottom:18px}
+.workflow-steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:17px}
+.workflow-step{position:relative;min-height:170px;padding:19px 14px 15px;border:1px solid #dce6ed;border-radius:11px;background:linear-gradient(180deg,#fbfdfe,#f6f9fb)}
+.workflow-step>span{position:absolute;top:10px;right:11px;font-size:9px;font-weight:800;color:#9aabb9;letter-spacing:.5px}
+.workflow-step>svg{width:23px;height:23px;color:#1f4f80;margin-bottom:10px}
+.workflow-step h4{margin:0 0 7px;color:#244b6e;font-size:12px}
+.workflow-step p{font-size:10px;line-height:1.55}
+.contact-card{margin-bottom:18px}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:15px}
+.contact-person{display:flex;align-items:center;gap:12px;padding:15px;border:1px solid #dce6ed;border-radius:11px;background:#f8fbfd}
+.contact-avatar{display:grid;place-items:center;width:45px;height:45px;flex:none;border-radius:50%;background:#183f70;color:#fff;font-size:11px;font-weight:800;letter-spacing:.5px}
+.contact-person h4{margin:0 0 4px;color:#173d68;font-size:12px;letter-spacing:.2px}
+.contact-person p{margin:0 0 7px;font-size:10px;line-height:1.4}
+.contact-person a,.contact-office a{display:inline-flex;align-items:center;gap:5px;color:#1d5d91;text-decoration:none;font-size:10px;font-weight:700}
+.contact-person a svg{width:13px;height:13px}
+.contact-office{display:flex;align-items:center;gap:11px;margin-top:13px;padding:13px 15px;border:1px solid #dce6ed;border-radius:10px;background:#f8fbfd;color:#33536d}
+.contact-office>svg{width:19px;height:19px;flex:none;color:#1d5d91}
+.contact-office strong{display:block;margin-bottom:4px;font-size:10px;letter-spacing:.25px;color:#244b6e}
+.contact-office a{font-weight:600}
+.about-note{display:flex;align-items:center;justify-content:center;gap:7px;color:#7890a2;font-size:9px;padding:10px 0}
+.about-note svg{width:14px;height:14px}
+@media(max-width:900px){.workflow-steps{grid-template-columns:repeat(2,minmax(0,1fr))}.about-grid{grid-template-columns:1fr}}
+@media(max-width:760px){.about-page{padding:4px 0 18px}.about-hero{padding:22px 18px;gap:14px;border-radius:12px}.about-hero-icon{width:50px;height:50px;border-radius:12px}.about-hero-icon svg{width:24px;height:24px}.about-hero h2{font-size:21px}.about-hero p{font-size:10px}.about-card{padding:17px;border-radius:11px}.about-card h3{font-size:17px}.workflow-steps{grid-template-columns:1fr}.workflow-step{min-height:0}.contact-grid{grid-template-columns:1fr}}
+@media(max-width:430px){.about-hero{display:block}.about-hero-icon{margin-bottom:13px}.about-hero h2{font-size:19px}.about-card-head h3{font-size:16px}}
+
+/* V31 additions */
+.role-workflow-grid{margin-top:18px}
+.remarks-pending-panel{min-height:420px}
+.remarks-pending-filterbar{align-items:flex-end}
+.remarks-pending-filterbar .field:first-child{min-width:190px}
+.remarks-pending-table-wrap{overflow:auto;border:1px solid #d7e2eb;border-radius:12px;background:#fff}
+.remarks-pending-table{min-width:560px}
+.remarks-pending-table th:last-child,.remarks-pending-table td:last-child{text-align:center;width:190px}
+.remarks-pending-table .count-link{font-weight:800;font-size:15px}
+@media(max-width:900px){.remarks-pending-filterbar{grid-template-columns:repeat(2,minmax(0,1fr))}.remarks-pending-filterbar .field:first-child{min-width:0}}
+@media(max-width:600px){.remarks-pending-filterbar{grid-template-columns:1fr}.remarks-pending-table{min-width:420px}}
