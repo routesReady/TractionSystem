@@ -1,0 +1,8 @@
+# Copy this content to .htaccess beside the deployed index.html in the frontend document root.
+Options -MultiViews
+RewriteEngine On
+RewriteBase /
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+RewriteRule ^ index.html [L]
