@@ -1,9 +1,0 @@
-# React/Vite single-page application fallback for Apache/LiteSpeed hosting.
-# Existing files (JS/CSS/images) are served normally; application routes go to index.html.
-Options -MultiViews
-RewriteEngine On
-RewriteBase /
-RewriteCond %{REQUEST_FILENAME} -f [OR]
-RewriteCond %{REQUEST_FILENAME} -d
-RewriteRule ^ - [L]
-RewriteRule ^ index.html [L]
