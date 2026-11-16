@@ -304,6 +304,46 @@ async function sendResetSms(mobileNumber) {
   }
 }
 
+// If an Excel-derived account was not provisioned during startup (for example,
+// a source workbook was restored or changed while the API was already running),
+// create only the requested account on demand. Existing password hashes are never
+// overwritten, so users who have changed their default password keep it.
+async function provisionExcelLoginUserIfMissing(username) {
+  const [trainSource, kavachSource, masterSource] = await Promise.all([
+    SourceDataset.findOne({ key: 'TRAINS_PER_DAY' }).select('rows').lean(),
+    SourceDataset.findOne({ key: 'KAVACH_LOCO_DETAILS' }).select('rows').lean(),
+    SourceDataset.findOne({ key: MASTER_DATA_KEY }).select('rows').lean()
+  ]);
+  const masterSheds = new Set((masterSource?.rows || []).map(row => normalizeUsername(row.SHED || row.shed)).filter(Boolean));
+  const shedExists = [...(trainSource?.rows || []), ...(kavachSource?.rows || [])]
+    .some(row => normalizeUsername(row.shed) === username);
+  const oemPair = (kavachSource?.rows || []).find(row => {
+    const shed = normalizeUsername(row.shed);
+    const make = normalizeUsername(row.kavachMake);
+    return shed && make && `${shed}-${make}` === username && (!masterSheds.size || masterSheds.has(shed));
+  });
+  if (!shedExists && !oemPair) return false;
+
+  const passwordHash = await bcrypt.hash(DEFAULT_USER_PASSWORD, 12);
+  if (shedExists) {
+    await User.updateOne(
+      { username, role: 'shed' },
+      { $setOnInsert: { username, role: 'shed', passwordHash, isActive: true, mustChangePassword: true, authVersion: 0 } },
+      { upsert: true }
+    );
+  }
+  if (oemPair) {
+    const shedIdentifier = normalizeUsername(oemPair.shed);
+    const oemIdentifier = normalizeUsername(oemPair.kavachMake);
+    await User.updateOne(
+      { username, role: 'oem' },
+      { $set: { shedIdentifier, oemIdentifier, isActive: true }, $setOnInsert: { username, role: 'oem', passwordHash, mustChangePassword: true, authVersion: 0 } },
+      { upsert: true }
+    );
+  }
+  return true;
+}
+
 app.post('/api/auth/login', async (req, res) => {
   try {
     const username = normalizeUsername(req.body?.username);
@@ -313,7 +353,18 @@ app.post('/api/auth/login', async (req, res) => {
     // Do not re-parse/synchronize every Excel-derived user on every login: with
     // large workbooks this makes sign-in slow and can overload the server.
     await ensureAdminUser();
-    const candidates = await User.find({ username, isActive: true }).limit(5);
+    let candidates = await User.find({ username, isActive: true }).limit(5);
+    // A missing Excel-derived account can be provisioned on this first login.
+    // This is intentionally only attempted when no active account exists; a
+    // mistyped password never resets or replaces an existing user's password.
+    if (!candidates.length) {
+      try {
+        await provisionExcelLoginUserIfMissing(username);
+        candidates = await User.find({ username, isActive: true }).limit(5);
+      } catch (provisionError) {
+        console.error('[auth] On-demand account provisioning failed:', provisionError?.message || provisionError);
+      }
+    }
     let matched = null;
     for (const candidate of candidates) {
       if (await bcrypt.compare(password, candidate.passwordHash)) { matched = candidate; break; }
